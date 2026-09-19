@@ -1,0 +1,23 @@
+{
+  "name": "marriage-scorer-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Marriage Scorer wrapped as a native app with Capacitor",
+  "scripts": {
+    "build:bridge": "esbuild src/native-bridge.js --bundle --format=iife --outfile=www/capacitor-bridge.js",
+    "gen:icons": "node scripts/generate-icons.js",
+    "sync": "npm run build:bridge && npx cap sync",
+    "android:debug": "npm run sync && cd android && ./gradlew assembleDebug"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.0",
+    "@capacitor/core": "^6.2.0",
+    "@capacitor/preferences": "^6.0.3"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^6.2.0",
+    "esbuild": "^0.24.0",
+    "sharp": "^0.33.5"
+  }
+}

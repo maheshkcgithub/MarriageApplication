@@ -1,0 +1,9 @@
+{
+  "appId": "com.maheshkc.marriagescorer",
+  "appName": "Marriage Scorer",
+  "webDir": "www",
+  "backgroundColor": "#0f3d2e",
+  "android": {
+    "backgroundColor": "#0f3d2e"
+  }
+}
